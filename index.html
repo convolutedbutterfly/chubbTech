@@ -8,7 +8,11 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body>
@@ -21,7 +25,7 @@
         </a>
       </div>
       <div class="actions-wrapper">
-        <a href="#" class="button-secondary small hide-mobile-portrait w-button">Get in touch →</a>
+        <a href="#contact-form-section" class="button-secondary small hide-mobile-portrait w-button">Get in touch →</a>
       </div>
     </div>
     <div class="nav-gradient-underline"></div>
@@ -38,10 +42,23 @@
             <div class="header-description">
               <p class="paragraph large">Custom web solutions to fit your needs</p>
               <p>Website launching soon...</p>
-              <div class="spacer-16"></div><a href="#" class="button w-button">Get in touch →</a>
+              <div class="spacer-16"></div>
+              <a href="#contact-form-section" class="button w-button">Get in touch →</a>
             </div>
           </div>
+          
           <div class="w-layout-blockcontainer container-2 w-container"></div>
+        </div>
+        <div id="contact-form-section">
+          <div class="contact-form-container">
+            <form id="contact-form">
+              <input name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <textarea name="message" placeholder="Message" required></textarea>
+              <div class="g-recaptcha" data-sitekey="6LfXhzIrAAAAAA4kAD4vdl0fR9M4EQJtfEku7zRM"></div>
+              <button type="submit">Send</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

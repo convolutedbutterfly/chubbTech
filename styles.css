@@ -2,6 +2,7 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font-family: "Oswald", sans-serif;
+    scroll-behavior: smooth;
   }
   
   body {
@@ -5271,4 +5272,22 @@ html {
       justify-self: start;
     }
   }
-  
+  #contact-form-section {
+    display: block;
+    padding: 3em;
+  }
+  .contact-form-container {
+    width: 60%;
+    margin: auto;
+    background-image: linear-gradient(45deg, var(--accent) 6%, var(--accent-light) 48%, #f59039 92%);
+    padding: 10px;
+  }
+  #contact-form {
+    background-color: white;
+    padding: 3rem;
+    text-align: center;
+  }
+  #contact-form input {
+    display: block;
+    margin-bottom:20px; 
+  }
