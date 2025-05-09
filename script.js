@@ -1,28 +1,3 @@
-  // Function to hide the banner
-  function hideBanner() {
-    document.getElementById("cookie-banner").style.display = "none";
-    }
-
-  // Check for existing consent
-  const consent = localStorage.getItem("cookieConsent");
-  if (consent === "accepted" || consent === "declined") {
-    hideBanner();
-  }
-
-  // Handle Accept button click
-  document.getElementById("accept-cookies").addEventListener("click", function () {
-    localStorage.setItem("cookieConsent", "accepted");
-    hideBanner();
-    // Initialize analytics or other scripts here
-  });
-
-  // Handle Decline button click
-  document.getElementById("decline-cookies").addEventListener("click", function () {
-    localStorage.setItem("cookieConsent", "declined");
-    hideBanner();
-    // Do not initialize analytics or other scripts
-  });
-
   //contact form js
   document.getElementById('contact-form').addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -67,3 +42,13 @@
     return;
   }
   });
+
+
+  const expandBtn = document.getElementById("contact-form-expand-button");
+  const form = document.getElementById("contact-form-container");
+  
+  expandBtn.addEventListener("click", function() {
+      form.classList.add("visible")
+      expandBtn.style.display = "none";
+    }
+  );

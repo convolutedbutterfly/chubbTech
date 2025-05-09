@@ -5,61 +5,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chubb Tech</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="maintenance.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Oswald:wght@200..700&display=swap"
     rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
 <body>
-  <div data-animation="default" class="nav w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav"
-    data-easing="ease" data-collapse="medium" role="banner" data-duration="400">
-    <div class="nav-container" style="opacity: 1;">
+  <div data-animation="default" class="nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-duration="400">
+    <div class="nav-container">
       <div class="logo-wrapper">
-        <a href="/" aria-current="page" class="logo w-nav-brand w--current" aria-label="home">
-          <div class="heading regular">Chubb Tech</div>
+        <a href="/" aria-current="page" class="logo" aria-label="home">
+          <div class="heading regular"><h4>CHUBB TECH</h4></div>
         </a>
       </div>
-      <div class="actions-wrapper">
-        <a href="#contact-form-section" class="button-secondary small hide-mobile-portrait w-button">Get in touch →</a>
+      <div>
       </div>
     </div>
     <div class="nav-gradient-underline"></div>
-    <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
-  </div>
-  <section class="section overflow-hidden">
-    <div style="opacity: 1;" class="container-large">
-      <div class="header-layout">
-        <div id="w-node-_05c97b58-b1ac-eabe-afbc-3861dce3b03d-58ebdaae" class="header-content-top"></div>
-        <div class="header-content-bottom">
+
+
+
+
+  <section class="section main overflow-hidden">
+    <div class="container-large">
           <div class="header-description-wrapper">
-            <h1 class="heading extra-large">Simple solutions for&nbsp;<span class="text-span">big</span> ideas</h1>
+            <h1>Simple solutions for&nbsp;<span class="text-span">big</span> ideas</h1>
             <div class="spacer-16"></div>
-            <div class="header-description">
-              <p class="paragraph large">Custom web solutions to fit your needs</p>
+              <p>Custom web solutions to fit your needs</p>
               <p>Website launching soon...</p>
               <div class="spacer-16"></div>
-              <a href="#contact-form-section" class="button w-button">Get in touch →</a>
+              <div id="contact-form-expand-button" class="button">Get in touch →</div>
             </div>
           </div>
-          
-          <div class="w-layout-blockcontainer container-2 w-container"></div>
-        </div>
-        <div id="contact-form-section">
-          <div class="contact-form-container">
+
+
+
+
+          <div id="contact-form-container">
             <form id="contact-form">
               <input name="name" placeholder="Your Name" required />
               <input type="email" name="email" placeholder="Your Email" required />
               <textarea name="message" placeholder="Message" required></textarea>
-              <div class="g-recaptcha" data-sitekey="6LfXhzIrAAAAAA4kAD4vdl0fR9M4EQJtfEku7zRM"></div>
-              <button type="submit">Send</button>
+              <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+              <button type="submit" class="button">Send</button>
             </form>
           </div>
-        </div>
-      </div>
-    </div>
   </section>
+  <script src="script.js"></script>
+
+  </div>
+  </body>
+  </html>
