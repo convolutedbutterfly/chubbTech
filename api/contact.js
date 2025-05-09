@@ -44,7 +44,7 @@ if (!isHuman) {
 
     // Send email via Resend
     await resend.emails.send({
-      from: "Chubb Tech louise@chubb.tech",
+      from: "Chubb Tech <louise@chubb.tech>",
       to: "louise@chubb.tech",
       subject: "New Contact Form Submission",
       html: `<p><strong>Name:</strong> ${name}</p>
