@@ -33,7 +33,7 @@
     };
 
     try {
-      const res = await fetch('chubb-tech.vercel.app/api/contact', {
+      const res = await fetch('chubb.tech/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
