@@ -1,63 +1,69 @@
-  //contact form js
-  document.getElementById('contact-form').addEventListener('submit', async function (e) {
+// Wait until the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById('contact-form');
+  const messageDiv = document.getElementById('form-message');
+
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
-    const form = e.target;
 
-    // Basic validation
-    if (!form.name.value || form.name.value.length < 2) {
-      alert("Please enter a valid name.");
-      return;
-    }
-    if (!form.email.value || !form.email.value.includes("@")) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-    if (!form.message.value || form.message.value.length < 10) {
-      alert("Your message must be at least 10 characters.");
-      return;
-    }
+    // Reset previous messages
+    messageDiv.textContent = "";
+    messageDiv.className = "hidden";
 
-    // reCAPTCHA
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
     const recaptchaToken = grecaptcha.getResponse();
+
+    // Basic form validation
+    if (name.length < 2) {
+      return showMessage("Please enter a valid name.", "error");
+    }
+    if (!email.includes("@")) {
+      return showMessage("Please enter a valid email address.", "error");
+    }
+    if (message.length < 10) {
+      return showMessage("Your message must be at least 10 characters.", "error");
+    }
     if (!recaptchaToken) {
-      alert("Please complete the reCAPTCHA.");
-      return;
+      return showMessage("Please complete the reCAPTCHA.", "error");
     }
 
-    // Build payload
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-      recaptchaToken
-    };
-
+    // Send to backend
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: JSON.stringify({ name, email, message, recaptchaToken })
       });
 
       const result = await res.json();
+
       if (res.ok) {
-        alert("Message sent successfully!");
+        showMessage("✅ Message sent successfully!", "success");
         form.reset();
-        grecaptcha.reset(); // reset reCAPTCHA
+        grecaptcha.reset();
       } else {
-        alert("Server error: " + (result.error || "Something went wrong."));
+        showMessage(`❌ ${result.error || "Server error. Please try again."}`, "error");
       }
     } catch (err) {
       console.error(err);
-      alert("Failed to send message.");
+      showMessage("❌ Failed to send message.", "error");
     }
   });
 
+  function showMessage(msg, type) {
+    messageDiv.textContent = msg;
+    messageDiv.className = type === "success" ? "form-message success" : "form-message error";
+  }
+
+  // Expand form logic
   const expandBtn = document.getElementById("contact-form-expand-button");
-  const form = document.getElementById("contact-form-container");
-  
-  expandBtn.addEventListener("click", function() {
-      form.classList.add("visible")
+  const formContainer = document.getElementById("contact-form-container");
+  if (expandBtn && formContainer) {
+    expandBtn.addEventListener("click", () => {
+      formContainer.classList.add("visible");
       expandBtn.style.display = "none";
-    }
-  );
+    });
+  }
+});
