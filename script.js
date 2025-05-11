@@ -40,15 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
       const result = await res.json();
 
       if (res.ok) {
-        showMessage("✅ Message sent successfully!", "success");
+        showMessage("Thanks! I will be in touch soon :)", "success");
         form.reset();
         grecaptcha.reset();
       } else {
-        showMessage(`❌ ${result.error || "Server error. Please try again."}`, "error");
+        showMessage(`${result.error || "Server error. Please try again."}`, "error");
       }
     } catch (err) {
       console.error(err);
-      showMessage("❌ Failed to send message.", "error");
+      showMessage("Failed to send message.", "error");
     }
   });
 
