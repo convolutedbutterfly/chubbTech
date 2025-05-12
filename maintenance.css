@@ -620,6 +620,7 @@ html {
   }
   #contact-form-expand-button {
     margin: auto;
+    cursor: pointer;
   }
   #contact-form-container {
     display:block;
@@ -633,6 +634,7 @@ html {
   #contact-form-container.visible {
     opacity:1;
     width:500px;
+    max-width: 100%;
 
   }
   #contact-form {
@@ -664,6 +666,7 @@ html {
     outline: none;
     min-width:100px;
     margin: auto;
+    cursor: pointer;
   }
 
 h1 span {
