@@ -655,9 +655,7 @@ html {
   #contact-form input:focus, #contact-form textarea:focus {
     border: 3px solid var(--accent);
   }
-  .g-recaptcha div {
-    margin: auto;
-  }
+
   #contact-form button {
     outline: none;
     min-width:100px;

@@ -5,26 +5,15 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, message, recaptchaToken } = req.body;
+  const { name, email, message, company } = req.body;
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Missing fields' });
   }
 
-  // Optional: CAPTCHA validation
-  const verifyCaptcha = async (token) => {
-    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
-    });
-    const data = await response.json();
-    return data.success;
-  };
-
-  const isHuman = await verifyCaptcha(recaptchaToken);
-  if (!isHuman) {
-    return res.status(400).json({ error: 'Failed CAPTCHA verification.' });
+  // Honeypot check — if filled, it's spam
+  if (company && company.trim() !== "") {
+    return res.status(400).json({ error: 'Bot detected' });
   }
 
   try {

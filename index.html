@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="HTML, CSS, JavaScript, Chubb, CHUBB,, Chubb Tech, Web Development, Web Design, Custom, Drupal, Developer">
+  <meta name="description" content="Custom websites to fit your business needs">
+  <meta name="author" content="Louise Chubb">
   <title>Chubb Tech</title>
   <link rel="icon" type="image/png" href="assets/favicon.png"/>
   <link rel="stylesheet" href="maintenance.css" />
@@ -44,7 +47,10 @@
               <input name="name" placeholder="Your Name" required />
               <input type="email" name="email" placeholder="Your Email" required />
               <textarea name="message" placeholder="Message" required></textarea>
-              <div class="g-recaptcha" data-sitekey="6LfXhzIrAAAAAA4kAD4vdl0fR9M4EQJtfEku7zRM"></div>
+              <div style="display: none;">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" autocomplete="off" />
+              </div>
               <button type="submit" class="button">Send</button>
             </form>
             <div id="form-message" class="form-message hidden"></div>

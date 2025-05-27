@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const message = form.message.value.trim();
-    const recaptchaToken = grecaptcha.getResponse();
+    const company = form.company.value.trim();
 
     // Basic form validation
     if (name.length < 2) {
@@ -25,16 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (message.length < 10) {
       return showMessage("Your message must be at least 10 characters.", "error");
     }
-    if (!recaptchaToken) {
-      return showMessage("Please complete the reCAPTCHA.", "error");
-    }
 
     // Send to backend
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message, recaptchaToken })
+        body: JSON.stringify({ name, email, message, company })
       });
 
       const result = await res.json();
