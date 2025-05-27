@@ -4,63 +4,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="HTML, CSS, JavaScript, Chubb, CHUBB,, Chubb Tech, Web Development, Web Design, Custom, Drupal, Developer">
+  <meta name="keywords"
+    content="HTML, CSS, JavaScript, Chubb, CHUBB,, Chubb Tech, Web Development, Web Design, Custom, Drupal, Developer">
   <meta name="description" content="Custom websites to fit your business needs">
   <meta name="author" content="Louise Chubb">
   <title>Chubb Tech</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png"/>
-  <link rel="stylesheet" href="maintenance.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
-  <div data-animation="default" class="nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-duration="400">
+  <div data-animation="default" class="nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease"
+    data-duration="400">
     <div class="nav-container">
       <div class="logo-wrapper">
         <a href="/" aria-current="page" class="logo" aria-label="home">
-          <div class="heading regular"><h4>CHUBB TECH</h4></div>
+          <div class="heading regular">
+            <h4>CHUBB TECH</h4>
+          </div>
         </a>
       </div>
     </div>
-    <div class="nav-gradient-underline"></div> 
+    <div class="nav-gradient-underline"></div>
   </div>
+
+
   <section class="section main">
-    <div class="container-large">
-          <div class="header-description-wrapper">
-            <h1>Simple solutions for&nbsp;<span class="text-span">big</span> ideas</h1>
-            <div class="spacer-16"></div>
-              <p>Custom web solutions to fit your needs</p>
-              <p>Website launching soon...</p>
-              <div class="spacer-16"></div>
-              <div id="contact-form-expand-button" class="button">Get in touch →</div>
+
+    <!-- Header section-->
+
+    <div id="header" class="container-large">
+      <div class="header-description-wrapper">
+        <h1>Simple solutions for&nbsp;<span class="text-span">big</span> ideas</h1>
+        <div class="spacer-16"></div>
+        <p>Custom web solutions to fit your needs</p>
+        <div class="spacer-16"></div>
+        <div id="contact-form-expand-button" class="button">Get in touch →</div>
+      </div>
+      <div id="contact-form-container">
+        <form id="contact-form" method="post">
+          <input name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Message" required></textarea>
+          <div style="display: none;">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" autocomplete="off" />
+          </div>
+          <button type="submit" class="button">Send</button>
+        </form>
+        <div id="form-message" class="form-message hidden"></div>
+      </div>
+    </div>
+
+
+    <!-- About Section -->
+
+    <section id="about" class="section">
+      <div class="container-large">
+        <div class="centre-text">
+          <h2 class="heading extra-large about-grid-heading">Your ideas, online</h2>
+          <p class="paragraph-2">I know that building a website can feel overwhelming — but it doesn’t have to be. I work closely with you to understand what you actually need, then create a tailored solution that feels just right for your business. No unnecessary features, no jargon — just a straightforward, collaborative process that puts you in control and brings your ideas to life online.</p>
+        </div>
+      </div>
+      <section class="about-grid-container">
+        <div class="about-grid">
+
+          <div class="about-grid-col1">
+            <div class="arrow-container">
+              <div class="arrow arrow1"></div>
             </div>
+            <h3 class="about-grid-heading">Discovery</h3>
+            <p class="about-grid-text">We start by getting clear on what you need, what’s working (and what’s not), and where you want to go. This is where I ask questions, take notes, and really get to know your business.</p>
+          </div>
+
+          <div class="about-grid-col2">
+            <div class="arrow-container">
+              <div class="arrow arrow2"></div>
+            </div>
+            <h3 class="about-grid-heading">Design</h3>
+            <p class="about-grid-text">Once we’ve mapped things out, I’ll begin designing a look and structure that fits your brand, your goals, and your audience. You’ll see mockups, give feedback, and help shape the direction</p>
+          </div>
+
+          <div class="about-grid-col3">
+            <div class="arrow-container">
+              <div class="arrow arrow3"></div>
+            </div>
+            <h3 class="about-grid-heading">Develop</h3>
+            <p class="about-grid-text">With the design locked in, I’ll build your site and make sure everything works just as it should — on mobile, desktop, and everywhere in between.</p>
+          </div>
+
+          <div class="about-grid-col4">
+            <div class="arrow-container">
+              <div class="arrow arrow4"></div>
+            </div>
+            <h3 class="about-grid-heading">Deploy</h3>
+            <p class="about-grid-text">We’ll walk through the final version together, make any last tweaks, and I’ll get everything ready to go live. I’ll also make sure you’re comfortable managing your site, or support you with ongoing updates if you’d prefer.</p>
           </div>
 
 
+        </div>
+      </section>
+      </div>
+      </div>
+    </section>
 
 
-          <div id="contact-form-container">
-            <form id="contact-form" method="post">
-              <input name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <textarea name="message" placeholder="Message" required></textarea>
-              <div style="display: none;">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" autocomplete="off" />
-              </div>
-              <button type="submit" class="button">Send</button>
-            </form>
-            <div id="form-message" class="form-message hidden"></div>
-          </div>
   </section>
+
+
+
+
+
+
   <script src="script.js"></script>
   <script src="api/contact.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
   </div>
-  </body>
-  </html>
+</body>
+
+</html>
