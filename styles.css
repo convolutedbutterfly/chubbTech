@@ -9,7 +9,7 @@ html {
     margin: 0;
   }
   
-  main, menu, nav, section {
+   menu, nav, section {
     display: block;
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
@@ -219,6 +219,7 @@ html {
     margin-bottom: .25rem;
     margin-left: 1.5rem;
     padding-left: 1.25rem;
+    text-align: left;
   }
   
   strong {
@@ -355,7 +356,12 @@ html {
     align-items: center;
     width: 100%;
   }
+  .nav-links {
 
+  }
+  .nav-links a {
+    margin:10px;
+  }
   .button {
     background-color: var(--accent);
     background-image: linear-gradient(142deg, var(--accent) 10%, var(--accent-2) 88%);
@@ -394,7 +400,7 @@ html {
   .main {
     position: relative;
     padding-top: 4.5rem;
-    padding-bottom: 300px;
+    padding-bottom: 200px;
   }
 
   
@@ -423,7 +429,9 @@ html {
     margin-right: auto;
 
   }
-
+  .header-description-wrapper a {
+    margin: auto;
+  }
  
   .gradient-divider {
     background-image: linear-gradient(45deg, var(--accent) 7%, var(--accent-2) 92%);
@@ -435,7 +443,9 @@ html {
 #header {
   padding-bottom: 4.5rem;
 }
-
+#contact {
+  padding-bottom: 0;
+}
   #contact-form-expand-button {
     margin: auto;
     cursor: pointer;
@@ -443,6 +453,14 @@ html {
   #contact-form-container {
     display:none;
     width: 10%;
+    margin: auto;
+    background-image: linear-gradient(45deg, var(--accent) 6%, var(--accent-light) 48%, #f59039 92%);
+    padding: 10px;
+    transition: width 1.5s;
+  }
+    #contact-page-form-container {
+    display: block;
+    width: 50%;
     margin: auto;
     background-image: linear-gradient(45deg, var(--accent) 6%, var(--accent-light) 48%, #f59039 92%);
     padding: 10px;
@@ -572,10 +590,10 @@ h1 span {
   background-image: linear-gradient(90deg, #F8834D 10%, #F59039 100%);
 }
 
-/*  gradient box  */
+/*  services section  */
 #services {
   display: grid;
-  background: linear-gradient(90deg, rgba(238 252 83 0.8), rgba(120 239 197 0.8)),  linear-gradient(180deg, rgba(253 67 205 0.8), rgba(74 68 215 0.8));
+  background: var(--accent-light);
 }
 
 #services .button {
@@ -584,17 +602,93 @@ h1 span {
   margin-top: 10px;
 }
 
+.services-page .main {
+  padding-top:0;
+  background-color: var(--accent-light);
+}
+section#services {
+  padding-bottom: 0;
+}
+section.services-body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.services-body {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom:0;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.services-page .section-description {
+  padding-bottom: 2rem;
+}
+.services-icon {
+  height: auto;
+  justify-self: center;
+}
+.services-icon img {
+  width: 80px;
+  height: 80px;
+}
+img.icon-small {
+  width: 40px;
+  height: 40px;
+}
+.services-info h3, .services-info h4{
+ margin-bottom: 10px;
+}
+.services-info h4 {
+  margin-top: 10px;
+}
+.services-info-heading {
+  text-align: left;
+}
+.services-comparison {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-bottom:0;
+}
+.service-table-container {
+  overflow-x:auto;
+}
+  .services-comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--accent);
+  }
+    .services-comparison table th {
+      height: 2rem;
+      background-color: var(--accent);
+      color: white;
+    }
+.services-table-col1{
+  width:30%;
+  border-right: 1px solid var(--accent);
+  border-left: 1px solid var(--accent);
+
+}
+.services-table-col2, .services-table-col3, .services-table-col4, .services-table-col5{
+  width: 17.5%;
+  text-align: center;
+  border-right: 1px solid var(--accent);
+}
 
 /*  footer  */
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 200px;
   height: 2.5rem;
 }
 
-.footer-gradient{
-  height: 200px;
+.gradient-box{
+  display: grid;
+  align-content: center;
   width: 100%;
   margin: auto;
   background-image: 
@@ -604,8 +698,17 @@ h1 span {
     radial-gradient(circle at bottom right,rgba(248, 131, 77, 0.8) 0%, rgba(255, 255, 255, 0) 50%),
     radial-gradient(circle at top right,rgba(245, 144, 57, 0.8) 0%, rgba(255, 255, 255, 0) 50%);
   }
+.footer a.button {
+  background-image: none;
+  background-color: rgba(55, 55, 55, 0);
+  text-align: center;
+  margin: auto;
 
-  
+}
+
+/* Media queries */
+
+
   @media screen and (max-width: 1040px) {
     h1 {
       font-size: 3.25rem;
@@ -650,13 +753,45 @@ h1 span {
     .about-grid {
         grid-template-columns: repeat(2, minmax(200px, 1fr));
     }
+    #contact-page-form-container {
+    width: 60%;
+    }
   }
-  
+    @media screen and (max-width: 800px) {
+          #contact-page-form-container {
+    width: 60%;
+    }
+    #contact-form {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+      #contact-form input, #contact-form textarea {
+        width: 90%;
+    }
+  }
   @media screen and (max-width: 650px) {
 
     .about-grid {
         grid-template-columns: repeat(1, minmax(200px, 80%));
         justify-content: center;
     }
+    .services-body {
+      grid-template-columns: 1fr;
+      padding-left: 10%;
+      padding-right: 10%;
 
+    }
+    .services-info-heading {
+      text-align: center;
+    }
+    #contact-page-form-container {
+    width: 80%;
+    }
+        #contact-form {
+      padding-left: 1rem;
+      padding-right: 1%;
+    }
+      #contact-form input, #contact-form textarea {
+        width: 90%;
+    }
   }
