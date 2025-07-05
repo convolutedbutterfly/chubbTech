@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (res.ok) {
         showMessage("Thanks! I will be in touch soon :)", "success");
         form.reset();
-        grecaptcha.reset();
       } else {
         showMessage(`${result.error || "Server error. Please try again."}`, "error");
       }
