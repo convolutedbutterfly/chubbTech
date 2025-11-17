@@ -143,10 +143,7 @@ strong {
   background: linear-gradient(to right, var(--pink-light), var(--red));
   color: var(--white);
 }
-.btn--tertiary {
-  background: linear-gradient(to right, var(--pink-lighter), var(--pink-dark));
-  color: var(--grey-dark);
-}
+
 
 .btn--secondary {
   border: 1px solid var(--red);
@@ -973,9 +970,6 @@ h1 span {
 .section-work-together .key-differences {
   background-color: var(--pink-lighter);
 }
-.section-work-together .email {
-  color: var(--purple-dark);
-}
 
 
 /* ------------------------------
@@ -1011,8 +1005,8 @@ h1 span {
 #contact-form input,
 #contact-form textarea {
   width: 100%;
+  font-family: sans-serif;
   padding: 0.75rem 1rem;
-  font-size: 1rem;
   border: 1px solid var(--pink-light);
   border-radius: 8px;
   background: var(--bg-light);
@@ -1050,14 +1044,8 @@ h1 span {
   text-align: center;
 }
 
-.form-message.success {
-  background: var(--green-light);
-  color: var(--grey-dark);
-}
-
 .form-message.error {
-  background: var(--pink-lighter);
-  color: var(--pink-dark);
+  color: var(--red);
 }
 
 .hidden {
