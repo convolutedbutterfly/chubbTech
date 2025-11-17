@@ -5,267 +5,330 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="keywords"
-    content="HTML, CSS, JavaScript, Chubb, CHUBB,, Chubb Tech, Web Development, Web Design, Custom, Drupal, Developer">
+    content="HTML, CSS, JavaScript, Chubb, CHUBB, Chubb Tech, Web Development, Web Design, Custom, Drupal, Developer">
   <meta name="description" content="Custom websites to fit your business needs">
   <meta name="author" content="Louise Chubb">
   <title>Chubb Tech</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="https://kit.fontawesome.com/bdb1292141.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
   <!-- Navbar -->
-
-  <div data-animation="default" class="nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease"
-    data-duration="400">
+  <div data-animation="default" class="nav">
     <div class="nav-container">
       <div class="logo-wrapper">
         <a href="/" aria-current="page" class="logo" aria-label="home">
-          <div class="heading regular">
-            <h4>CHUBB TECH</h4>
-          </div>
+          <h4>Chubb Tech</h4>
         </a>
       </div>
       <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-
+      <a href="#section-about">About</a>
+      <a href="#section-offerings">Services</a>
+      <a href="#section-work-together">Partnerships</a>
       </div>
+      <div class="nav-links-contact">
+        <a href="#section-contact" class="btn btn--primary btn--round">Contact</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
     <div class="nav-gradient-underline"></div>
   </div>
 
-<!-- Main page -->
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- Mobile menu panel -->
+  <div class="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <a href="#section-about">About</a>
+      <a href="#section-offerings">Services</a>
+      <a href="#section-work-together">Partnerships</a>
+    </nav>
+    <div class="mobile-menu-contact">
+      <a href="#section-contact" class="btn btn--primary btn--round">Contact</a>
+    </div>
+  </div>
+
+
+  <!-- Main page -->
   <section class="main">
 
-    <!-- Header section-->
+    <!-- New Hero -->
+    <div class="section-hero">
+      <div class="hero">
+        <div class="hero-image">
+          <img src="/assets/img/me-hero-splodge.png" alt="woman smiling while working on a laptop">
+        </div>
+        <div class="hero-text">
+          <h1 aria-label="Hi, I'm a Developer" class="">Hi, I'm <span class="text-span typewriter"></span></h1>
+          <h2>Your tech-savvy digital support partner</h2>
+          <p>Are you a small businesses or ‘solo-preneur’? Have you built your business around something you love but
+            are now struggling to keep up with the demands of the digital side of your business? Whether you're a coach,
+            creative, consultant or service provider, you deserve to spend your time focussing on doing what you love -
+            the reason you started your business in the first place. If you’re drowning in admin, overwhelmed by website
+            updates or just don’t know where to begin with creating a system that works for you, I can help take the
+            pressure off by doing what I love - creating simple solutions for BIG ideas. </p> <a
+            href="#section-offerings" class="btn btn--primary">Explore services</a>
+          <a href="#section-contact" class="btn btn--secondary">Get in touch</a>
+        </div>
+      </div>
+    </div>
 
-    <div id="header" class="container-large">
-      <div class="header-description-wrapper">
-        <h1>Simple solutions for&nbsp;<span class="text-span">big</span> ideas</h1>
-        <div class="spacer-16"></div>
-        <p>Custom web solutions to fit your needs</p>
-        <div class="spacer-16"></div>
-        <a class="button" href="#contact">Get in touch →</a>
-        <!-- old button
-        <div id="contact-form-expand-button" class="button">Get in touch →</div>
+    <!-- <div class="scroll-arrow">
+      <a href="#section-offerings">
+        <img src="assets/img/scroll-arrow.png" alt="interactive bouncing arrow"></a>
+    </div> -->
+
+    <!--  About Section  -->
+    <div id="section-about" class="section-about">
+      <div class="about-text">
+        <h1>Meet Louise</h1>
+        <p>Hi! I'm Louise, the person behind Chubb Tech. As a tech-savvy, neurodiverse freelancer, I understand what
+          it's
+          like to feel overwhelmed by the digital side of running a business.</p>
+        <p>I started Chubb Tech because I believe every female entrepreneur deserves to give their all to the thing they
+          love
+          without feeling bogged down by the technical stuff. Whether you're a coach, creative, or service provider, I'm
+          here to take the tech stress off
+          your plate so you can focus on what you love most.</p>
+        <p class="bold">My mission? To be the warm, flexible, genuinely helpful tech partner you've been looking for.
+        </p>
       </div>
-      <div id="contact-form-container">
-        <form id="contact-form" method="post">
-          <input name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Message" required></textarea>
-          <div style="display: none;">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" autocomplete="off" />
+      <div class="about-features">
+        <div class="feature">
+          <span class="emoji">&#129504;</span>
+          <div class="feature-text">
+            <h3>Neurodivergent-friendly</h3>
+            <h4>I understand how overwhelming tech can feel. My approach is patient, clear, and judgment-free.</h4>
           </div>
-          <button type="submit" class="button">Send</button>
-        </form>
-        <div id="form-message" class="form-message hidden"></div>
+        </div>
+        <div class="feature">
+          <span class="emoji">&#128150;</span>
+          <div class="feature-text">
+            <h3>Genuine Care</h3>
+            <h4>Your success matters to me. I'm not just here to tick boxes — I'm genuinely in your corner.</h4>
+          </div>
+        </div>
       </div>
-    -->
+      <div class="about-features">
+        <div class="feature">
+          <span class="emoji">&#127800;</span>
+          <div class="feature-text">
+            <h3>Flexible Support</h3>
+            <h4>No bloated packages or rigid contracts. Just honest, adaptable support that grows with you.</h4>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="emoji">&#128171;</span>
+          <div class="feature-text">
+            <h3>One-stop Shop</h3>
+            <h4>Tech and admin support under one roof. Less juggling, more progress.</h4>
+          </div>
+        </div>
+      </div>
+      <div class="key-differences">
+        <h3>What makes me different</h3>
+        <div class="differences">
+          <div class="difference">
+            <span class="emoji">&#128483;</span>
+            <div class="difference-text">
+              <h4>Calm, clear communication</h4>
+            </div>
+          </div>
+          <div class="difference">
+            <span class="emoji">&#9889;</span>
+            <div class="difference-text">
+              <h4>Long-term partnership focus</h4>
+            </div>
+          </div>
+          <div class="difference">
+            <span class="emoji">&#129309;</span>
+            <div class="difference-text">
+              <h4>Always in your corner</h4>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     </div>
 
-
-    <!-- About Section -->
-
-    <section id="about" class="section">
-      <div class="container-large">
-        <div class="centre-text">
-          <h2 class="section-heading">Your ideas, online</h2>
-          <p class="section-description">I know that building a website can feel overwhelming — but it doesn’t have to be. I work closely with you to understand what you actually need, then create a tailored solution that feels just right for your business. No unnecessary features, no jargon — just a straightforward, collaborative process that puts you in control and brings your ideas to life online.</p>
-        </div>
-      </div>
-      <section class="about-grid-container">
-        <div class="about-grid">
-
-          <div class="about-grid-col1">
-            <div class="arrow-container">
-              <div class="arrow arrow1"></div>
-            </div>
-            <h3 class="about-grid-heading">Discovery</h3>
-            <p class="about-grid-text">We start by getting clear on what you need, what’s working (and what’s not), and where you want to go. This is where I ask questions, take notes, and really get to know your business.</p>
+    <!--  Services Section  -->
+    <div class="section-offerings" id="section-offerings">
+      <h1>Simple solutions for <span class="text-span">BIG</span> ideas</h1>
+      <h2>Two ways to work together — pick what fits your needs right now</h2>
+      <div class="offerings">
+        <div class="offering va-offering">
+          <div class="offering-image">
+            <img src="assets/img/graphic-va.png" alt="purple graphic depicting a laptop and office themed background">
           </div>
-
-          <div class="about-grid-col2">
-            <div class="arrow-container">
-              <div class="arrow arrow2"></div>
-            </div>
-            <h3 class="about-grid-heading">Design</h3>
-            <p class="about-grid-text">Once we’ve mapped things out, I’ll begin designing a look and structure that fits your brand, your goals, and your audience. You’ll see mockups, give feedback, and help shape the direction</p>
-          </div>
-
-          <div class="about-grid-col3">
-            <div class="arrow-container">
-              <div class="arrow arrow3"></div>
-            </div>
-            <h3 class="about-grid-heading">Develop</h3>
-            <p class="about-grid-text">With the design locked in, I’ll build your site and make sure everything works just as it should — on mobile, desktop, and everywhere in between.</p>
-          </div>
-
-          <div class="about-grid-col4">
-            <div class="arrow-container">
-              <div class="arrow arrow4"></div>
-            </div>
-            <h3 class="about-grid-heading">Deploy</h3>
-            <p class="about-grid-text">We’ll walk through the final version together, make any last tweaks, and I’ll get everything ready to go live. I’ll also make sure you’re comfortable managing your site, or support you with ongoing updates if you’d prefer.</p>
+          <div class="offering-text">
+            <h3>Digital VA Services</h3>
+            <h4>£36/hour • Weekly support call included</h4>
+            <h5>Drowning in the daily?</h5>
+            <p>Keeping your business running smoothly online can be overwhelming. That's where I come in!</p>
+            <ul>
+              <li>Inbox rules, scheduling and booking links</li>
+              <li>Template creation, mailing list support</li>
+              <li>Basic automations</li>
+              <li>Formatting blog posts and newsletters</li>
+              <li>Scheduling social media content</li>
+              <li>Canva tweaks and template upkeep</li>
+              <li>Google business setup</li>
+              <li>Branding and logo/marketing creation</li>
+              <li>Content tweaks in Wix or WordPress</li>
+              <li>Notion/Google Drive system setup</li>
+              <li>Platform integrations and tool setup</li>
+            </ul>
+            <a href="#" class="btn btn--primary btn--round">Let's lighten your digital load</a>
           </div>
         </div>
-      </section>
-      </div>
-      </div>
-    </section>
+        <div class="offering web-offering">
+          <div class="offering-image">
+            <img src="assets/img/graphic-web.png" alt="green graphic depicting a laptop with code on the screen">
+          </div>
+          <div class="offering-text">
+            <h3>Website Development</h3>
+            <h4>Priced per project</h4>
+            <h5>Full Website Solutions</h5>
+            <uL>
+              <li>Website design and build (Wix, WordPress, custom)</li>
+              <li>Booking systems, payments, newsletter integrations</li>
+              <li>Perfect for service providers and solo business owners</li>
+            </uL>
+            <h5>Project Workflow Includes</h5>
+            <uL>
+              <li>Discovery & Planning</li>
+              <li>Wireframing</li>
+              <li>Content & Copywriting Support</li>
+              <li>Visual Design</li>
+              <li>Development & Launch</li>
+              <li>Training and Post-Launch Support</li>
+            </uL>
+            <a href="#" class="btn btn--primary btn--round">Let's get you online</a>
+          </div>
+        </div>
 
-  <!-- Services Section -->
-
-    <section id="services" class="section">
-      <div class="container-large">
-        <section class="section">
-            <div class="container-large">
-                <div class="centre-text">
-                    <h2 class="section-heading">Simple, effective websites - tailored to you</h2>
-                    <p class="section-description">Whether you're just starting out or scaling your business, there's a flexible package to match. From simple one-pagers to fully-featured booking platforms, I build sites that not only look good — they work hard too.</p>
-                </div>
-                <div class="spacer-16"></div>
-                <section class="services-body">
-                    <div class="services-icon">
-                        <img src="assets/StarterIcon.png">
-                        <div class="spacer-16"></div>
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info-heading">Starter Site</h3>
-                        <p><strong>A professional, mobile-ready website to get you online fast.</strong></p>
-                        <p>Perfect for individuals or startups who need to build credibility and get found.
-                        <h4>Includes:</h4>
-                        <ul>
-                            <li>Up to 4 custom-coded pages (HTML/CSS/JavaScript)</li>
-                            <li>Clean, responsive design</li>
-                            <li>Contact form</li>
-                            <li>Social/media links</li>
-                        </ul>
-                        <p>Add-ons available: branding kit, SEO setup, content support, maintenance.</p>
-                        <p>Note: This package does not include a blog or CMS.
-
-                    </div>
-                </section>
-                <section class="services-body">
-                    <div class="services-icon">
-                        <img src="assets/ProIcon.png">
-                        <div class="spacer-16"></div>
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info-heading">Pro Site</h3>
-                        <p><strong>For service providers who want to take bookings and payments online.</strong></p>
-                        <p>Tailored for coaches, personal trainers, and beauty pros who need an online HQ that works for them.
-                        <h4>Includes:</h4>
-                        <ul>
-                            <li>Includes everything in Starter Site, plus:</li>
-                            <li>Integration with Stripe, Calendly, or equivalent tools</li>
-                            <li>Clear call-to-actions to drive signups or bookings</li>
-                            <li>Optional email form integrations (Mailchimp, etc)</li>
-                        </ul>
-                        <p>Add-ons available: branding kit, SEO setup, content support, maintenance.</p>
-                        <p>Note: This package does not include a blog or CMS.</p>
-                    </div>
-                </section>
-                <section class="services-body">
-                    <div class="services-icon">
-                        <img src="assets/Pro+Icon.png">
-                        <div class="spacer-16"></div>
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info-heading">Pro+ Site</h3>
-                        <p><strong>For professionals who need a blog or site with CMS functionality.</strong></p>
-                        <p>For growing businesses that want to share updates and host resources.
-                        <h4>Includes:</h4>
-                        <ul>
-                            <li>Includes everything in Starter and Pro Site, plus:</li>
-                            <li>A full CMS (Wix,Wordpress or Drupal depending on project needs) </li>
-                            <li>Blog / News functionality</li>
-                        </ul>
-                        <p>Add-ons available: branding kit, SEO setup, content support, maintenance.</p>
-                    </div>
-                </section>
-                <section class="services-body">
-                    <div class="services-icon">
-                        <img src="assets/CustomIcon.png">
-                        <div class="spacer-16"></div>
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info-heading">Custom Solution</h3>
-                        <p><strong>Custom-built platforms with CMS functionality, members area and tailored features.</strong></p>
-                        <p>For businessess/professionals with complex needs or want a client portal</p>
-                        <h4>Includes:</h4>
-                        <ul>
-                            <li>Completely tailored platform</li>
-                            <li>Custom workflows designed to suit your businesses flow</li>
-                            <li>Optional custom dashboards or resource areas</li>
-                            <li>SEO configuration (as an add-on or built-in)</li>
-                            <li>Ongoing maintenance included as standard on custom builds</li>
-                        </ul>
-                        <p>Add-ons available: branding kit, SEO setup, content support.</p>
-                        <p>Best for businesses ready to scale.</p>
-                    </div>
-                </section>
-                <section class="services-body">
-                    <div class="services-icon">
-                        <img src="assets/PuzzleIcon.svg">
-                    </div>
-                    <div class="services-info">
-                        <h3 class="services-info-heading">Ongoing Support and extras</h3>
-                        <ul>
-                            <li>Maintenance Plans: Updates, backups, and small edits</li>
-                            <li>Training & Handover: Documentation or 1:1 walkthroughs</li>
-                            <li>Branding Kits: Logo, colour palette, Canva templates</li>
-                            <li>Site Audits or Redesigns: Clean up or modernise your existing site</li>
-                            <li>Platform Rebuilds: Upgrade your current site on a new system (no messy legacy migrations)</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </section>
+        <div class="offering custom-offering">
+          <div class="offering-image">
+            <img src="assets/img/graphic-system.png"
+              alt="purple graphic depicting a laptop and office themed background">
+          </div>
+          <div class="offering-text">
+            <h3>Custom Solution</h3>
+            <h4>Priced per project</h4>
+            <h5>Need something a bit different?</h5>
+            <p>Every business is different, and not one solution fits all. Thats why I offer bespoke solutions. Wether you need an internal tool to track your operations, or a fully fledged customer portal, I'm your gal.</p>
+            <p>With experience of building unique systems for niche business problems, I can support you through every stage of your project. From:</p>
+            <ul>
+              <li>Requirements grooming</li>
+              <li>System and workflow design</li>
+              <li>Aestetic design and branding</li>
+              <li>Build/launch and maintainence</li>
+            </ul>
+            <p>Even if you dont know exactly what you need, but you have an idea, let me help you bring it to life.</p>
+            <a href="#" class="btn btn--primary btn--round">Let's build something cool</a>
+          </div>
+        </div>
       </div>
-    </section>
+        <div class="offering-text-highlight">
+          <h5>Flexible Options</h5>
+          <ul>
+            <li>Simple, cash-flow friendly options. Only have a limited budget each month? I can work within a set weekly/monthly retainer to ensure you get the most support.</li>
+            <li>All websites/custom solutions can be combined with ongoing VA support or as a standalone project</li>
+            <li>All websites/custom solutions come with ongoing maintenance and support</li>
+          </ul>
+        </div>
+    </div>
+
+
+    <!--  Partnership Section  -->
+    <div id="section-work-together" class="section-work-together">
+      <h1>A partnership approach...</h1>
+      <div class="partnership-info">
+        <div class="partnership-image partnership-info-col">
+          <img src="assets/img/graphic-partnership.png" alt="pink graphic depicting two women chatting on a sofa">
+        </div>
+        <div class="partnership-text partnership-info-col">
+          <p>I love supporting small businesses to achieve their goals through providing simple solutions for their BIG
+            ideas, but I also understand how hard it can be to relinquish control over certain aspects of your business.
+          </p>
+          <p>You’ve worked so hard to build it up and put in the hours to make it work.</p>
+          <p>I’ve met so many amazing ambitious women that have built incredible businesses by themselves, but many of
+            them are close to burn out, trying to wear all the hats that comes with running a business.</p>
+          <p>That’s where I come in, when you work with me, I become an extension of your team - someone who knows your
+            systems, understands your goals, and is genuinely invested in your success. I believe in building lasting
+            digital partnerships where I truly get to know your business and grow alongside you.</p>
+          <p>I work closely with you to understand what you actually need, then create a tailored solution that feels
+            just right for your business. A straightforward, collaborative process that keeps you in control and takes
+            the stress away.</p>
+          <p>I prefer to focus on only a few meaningful partnerships where I can truly understand your business and
+            provide consistent, reliable support and be a friendly face behind the screen.</p>
+          <p>Before commiting to any packages or work I like to meet potential clients first to see if were a good fit,
+            whether thats over a video call or in the local coffee shop, I beleive a relaxed chat about your business
+            and your struggles, really helps me get to know you and how i can best support you.</p>
+          <p>Not sure what you need? If you're looking for ongoing digital support and want to explore how we could work
+            together long-term, I'll help you figure out what approach would work best for your business.</p>
+        </div>
+      </div>
+      <div class="offerings">
+        <div class="offering">
+          <span class="emoji">&#9749;</span> <!-- REPLACE ME -->
+          <div class="offering-text">
+            <h3>Got an idea?</h3>
+            <p>I'd love to hear about it! Let's grab a coffee (or a hot chocolate!) and chat about how I can support you best.<em> Virtual or in person</em></p>
+            <a href="#" class="btn btn--primary btn--round">Schedule a chat</a>
+          </div>
+        </div>
+        <div class="offering ">
+          <span class="emoji">&#128187;</span> <!-- REPLACE ME -->
+          <div class="offering-text">
+            <h3>Prefer e-mail?</h3>
+        <p>Drop me a message and tell me a bit about what you're working on and the tech-y bits of your business that your struggling with.</p>
+            <a href="#section-contact" class="btn btn--primary btn--round">Send me an e-mail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
     <!--  Contact Section  -->
-    <section id="contact">
-        <div class="centre-text">
-          <h2 class="section-heading">Let’s bring your ideas to life.</h2>
-          <p class="section-description">I’d love to hear more about your business and where you’re headed. Whether you’re ready to get started or just want to talk it through, I’m here to help.</p>
-          <div class="spacer-16"></div>
-        </div>
+    <div id="section-contact" class="anchor">
+      <div class="centre-text">
+        <h2 class="section-heading">Let’s bring your ideas to life.</h2>
+        <p class="section-description">I’d love to get to know you and your business. Whether you’re
+          ready to get support or just want to talk it through, I’m here to help.</p>
+        <div class="spacer-16"></div>
       </div>
-      <div id="contact-page-form-container">
-        <form id="contact-form" method="post">
-          <input name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Message" required></textarea>
-          <div style="display: none;">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" autocomplete="off" />
-          </div>
-          <button type="submit" class="button">Send</button>
-        </form>
-        <div id="form-message" class="form-message hidden"></div>
-      </div>
-      </section>
-
-
-<!-- Footer section -->
-
-    <section class="footer gradient-box">
-        <div class="footer-link-container">
-          <!--
-            <a class="button" href="contact.html">Get in touch →</a>
-        -->
+    <div id="contact-form-container">
+      <form id="contact-form" method="post">
+        <input name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Message" required></textarea>
+        <div style="display: none;">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" autocomplete="off" />
         </div>
-    </section>
+        <button type="submit" class="btn btn--primary btn--round">Send</button>
+      </form>
+      <div id="form-message" class="form-message hidden"></div>
+    </div>
+    </div>
+
+    <div class="footer">
+      <h3>Chubb Tech</h3>
+      <h4>Calm, tech-savvy digital support for female-led businesses</h4>
+      <p>Digital VA Services <span class="dot">•</span> Custom Website Development <span class="dot">•</span>
+        Neurodivergent-Friendly</p>
+      <div class="line"></div>
+      <p><span class="emoji-v-small">&#169;</span> 2023 Chubb Tech</p>
+    </div>
+  </section>
 
   <script src="script.js"></script>
   <script src="api/contact.js"></script>
